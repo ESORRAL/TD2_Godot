@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cad7nkex7cwv2"]
 
 [ext_resource type="PackedScene" uid="uid://biw7yjipqq8wl" path="res://Player/player.tscn" id="1_ig7tw"]
@@ -9,3 +10,25 @@
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1496857085]
 transform = Transform3D(1, 0, 0, 0, -0.058034457, 0.9983146, 0, -0.9983146, -0.058034457, 0.17665255, 6.7520843, 0.03805232)
 fov = 78.74999
+=======
+[gd_scene format=3 uid="uid://c1kbq8w70ieg4"]
+
+[ext_resource type="Texture2D" uid="uid://d0clw3txbfsva" path="res://assets/texture/pixel-gazon-motif-transparent-pixelart-texture-de-bloc-d-ordinateur-modèle-herbe-verte-numérique-style-jeu-carré-383947503.webp" id="1_a202f"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_noarx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_a202f")
+uv1_scale = Vector3(4, 4, 4)
+texture_filter = 0
+
+[node name="Node3D" type="Node3D" unique_id=796426973]
+
+[node name="GridMap" type="GridMap" parent="." unique_id=1095226930]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="GridMap" unique_id=1067840384]
+mesh = SubResource("PlaneMesh_noarx")
+surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
+>>>>>>> Stashed changes
