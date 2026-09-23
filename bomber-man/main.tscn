@@ -1,34 +1,16 @@
-<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://cad7nkex7cwv2"]
 
 [ext_resource type="PackedScene" uid="uid://biw7yjipqq8wl" path="res://Player/player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dnyn2pvy8f4bk" path="res://Sol/grid_map.tscn" id="2_0xm2m"]
 
-[node name="Node3D" type="Node3D" unique_id=781427745]
+[node name="Node3D" type="Node3D" unique_id=1568625739]
 
 [node name="Player" parent="." unique_id=1991446174 instance=ExtResource("1_ig7tw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1496857085]
-transform = Transform3D(1, 0, 0, 0, -0.058034457, 0.9983146, 0, -0.9983146, -0.058034457, 0.17665255, 6.7520843, 0.03805232)
-fov = 78.74999
-=======
-[gd_scene format=3 uid="uid://c1kbq8w70ieg4"]
+[node name="GridMap" parent="." unique_id=368750449 instance=ExtResource("2_0xm2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
 
-[ext_resource type="Texture2D" uid="uid://d0clw3txbfsva" path="res://assets/texture/pixel-gazon-motif-transparent-pixelart-texture-de-bloc-d-ordinateur-modèle-herbe-verte-numérique-style-jeu-carré-383947503.webp" id="1_a202f"]
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_noarx"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0tk4"]
-transparency = 1
-shading_mode = 0
-albedo_texture = ExtResource("1_a202f")
-uv1_scale = Vector3(4, 4, 4)
-texture_filter = 0
-
-[node name="Node3D" type="Node3D" unique_id=796426973]
-
-[node name="GridMap" type="GridMap" parent="." unique_id=1095226930]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="GridMap" unique_id=1067840384]
-mesh = SubResource("PlaneMesh_noarx")
-surface_material_override/0 = SubResource("StandardMaterial3D_a0tk4")
->>>>>>> Stashed changes
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1070154041]
+transform = Transform3D(-0.9766723, -0.21470882, 0.003372908, 0, 0.015707282, 0.9998767, -0.2147353, 0.97655183, -0.015340867, -0.076024294, 8.658199, 1.1204593)
+fov = 67.072334
