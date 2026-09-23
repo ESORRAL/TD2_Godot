@@ -9,8 +9,8 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="GridMap" parent="." unique_id=368750449 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1070154041]
-transform = Transform3D(-0.9766723, -0.21470882, 0.003372908, 0, 0.015707282, 0.9998767, -0.2147353, 0.97655183, -0.015340867, -0.076024294, 8.658199, 1.1204593)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.076024294, 8.658199, 1.1204593)
 fov = 67.072334
