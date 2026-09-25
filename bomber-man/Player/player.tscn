@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d3mot6klylgig" path="res://assets/player/bombermandynablaster_tg-16pce.glb" id="2_4ntmi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l4fat"]
+radius = 0.4
 
 [node name="Player" type="CharacterBody3D" unique_id=1991446174]
 script = ExtResource("1_l8h54")

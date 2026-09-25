@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d0efhf3luro8p"]
 
 [ext_resource type="PackedScene" uid="uid://biw7yjipqq8wl" path="res://Player/player.tscn" id="1_ig7tw"]
-[ext_resource type="PackedScene" uid="uid://dnyn2pvy8f4bk" path="res://Sol/grid_map.tscn" id="2_0xm2m"]
+[ext_resource type="Script" path="res://Sol/map.gd" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cjl508lrirhdb" path="res://Enemy/enemy.tscn" id="3_h2yge"]
 
 [node name="Node3D" type="Node3D" unique_id=1568625739]
@@ -9,8 +9,8 @@
 [node name="Player" parent="." unique_id=1991446174 instance=ExtResource("1_ig7tw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
-[node name="GridMap" parent="." unique_id=368750449 instance=ExtResource("2_0xm2m")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+[node name="Map" type="Node3D" parent="." unique_id=368750449]
+script = ExtResource("2_0xm2m")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1070154041]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.088, 0)
