@@ -1,16 +1,15 @@
 [gd_scene format=3 uid="uid://biw7yjipqq8wl"]
 
 [ext_resource type="Script" uid="uid://dabprlhnjaxia" path="res://Player/player.gd" id="1_l8h54"]
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_dfx8u"]
+[ext_resource type="PackedScene" uid="uid://d3mot6klylgig" path="res://assets/player/bombermandynablaster_tg-16pce.glb" id="2_4ntmi"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l4fat"]
 
 [node name="Player" type="CharacterBody3D" unique_id=1991446174]
 script = ExtResource("1_l8h54")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=10361955]
-mesh = SubResource("CapsuleMesh_dfx8u")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2047444783]
 shape = SubResource("CapsuleShape3D_l4fat")
+
+[node name="Sketchfab_Scene" parent="." unique_id=48856966 instance=ExtResource("2_4ntmi")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
