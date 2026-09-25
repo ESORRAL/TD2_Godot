@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Bomber-Man"
-run/main_scene="uid://cad7nkex7cwv2"
+run/main_scene="uid://biw7yjipqq8wl"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
