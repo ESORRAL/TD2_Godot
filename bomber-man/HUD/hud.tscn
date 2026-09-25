@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://m6nm3ed823r1"]
+
+[ext_resource type="Texture2D" uid="uid://bkuyvg6haolms" path="res://assets/player/coeur.png" id="1_h61sl"]
+
+[node name="HUD" type="CanvasLayer" unique_id=197939373]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=120815297]
+
+[node name="TextureRect" type="TextureRect" parent="Node2D" unique_id=765063615]
+custom_minimum_size = Vector2(30, 30)
+offset_left = 30.000004
+offset_top = 30.000008
+offset_right = 269.0
+offset_bottom = 180.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_h61sl")
+expand_mode = 1
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="Node2D" unique_id=1301380697]
+custom_minimum_size = Vector2(150, 0)
+offset_left = 65.00002
+offset_top = 26.00001
+offset_right = 406.00003
+offset_bottom = 261.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_h61sl")
+expand_mode = 1
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="Node2D" unique_id=802373657]
+custom_minimum_size = Vector2(300, 0)
+offset_left = 106.99999
+offset_top = 25.0
+offset_right = 407.0
+offset_bottom = 292.0
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_h61sl")
+expand_mode = 1
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true

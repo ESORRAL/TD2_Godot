@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dabprlhnjaxia" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://d3mot6klylgig" path="res://assets/player/bombermandynablaster_tg-16pce.glb" id="2_4ntmi"]
-[ext_resource type="Texture2D" uid="uid://bkuyvg6haolms" path="res://assets/player/coeur.png" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l4fat"]
 radius = 0.4
@@ -17,43 +16,3 @@ shape = SubResource("CapsuleShape3D_l4fat")
 
 [node name="Sketchfab_Scene" parent="." unique_id=48856966 instance=ExtResource("2_4ntmi")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
-
-[node name="HUD" type="CanvasLayer" parent="." unique_id=1705067820]
-
-[node name="Node2D" type="Node2D" parent="HUD" unique_id=377019116]
-
-[node name="TextureRect" type="TextureRect" parent="HUD/Node2D" unique_id=1744189475]
-custom_minimum_size = Vector2(30, 30)
-offset_left = 30.000004
-offset_top = 30.000008
-offset_right = 269.0
-offset_bottom = 180.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_btcbx")
-expand_mode = 1
-stretch_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect2" type="TextureRect" parent="HUD/Node2D" unique_id=1509590331]
-custom_minimum_size = Vector2(150, 0)
-offset_left = 65.00002
-offset_top = 26.00001
-offset_right = 406.00003
-offset_bottom = 261.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_btcbx")
-expand_mode = 1
-stretch_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="TextureRect3" type="TextureRect" parent="HUD/Node2D" unique_id=645002571]
-custom_minimum_size = Vector2(300, 0)
-offset_left = 106.99999
-offset_top = 25.0
-offset_right = 407.0
-offset_bottom = 292.0
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_btcbx")
-expand_mode = 1
-stretch_mode = 3
-metadata/_edit_use_anchors_ = true

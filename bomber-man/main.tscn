@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://d0efhf3luro8p"]
+[gd_scene format=3 uid="uid://cad7nkex7cwv2"]
 
 [ext_resource type="PackedScene" uid="uid://biw7yjipqq8wl" path="res://Player/player.tscn" id="1_ig7tw"]
-[ext_resource type="Script" path="res://Sol/map.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://iseh88y0nayi" path="res://Sol/map.gd" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://cjl508lrirhdb" path="res://Enemy/enemy.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://m6nm3ed823r1" path="res://HUD/hud.tscn" id="4_1bvp3"]
 
 [node name="Node3D" type="Node3D" unique_id=1568625739]
 
@@ -20,3 +21,5 @@ fov = 67.072334
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 17.556887, 0)
 
 [node name="Enemy" parent="." unique_id=1613161469 instance=ExtResource("3_h2yge")]
+
+[node name="HUD" parent="." unique_id=197939373 instance=ExtResource("4_1bvp3")]
