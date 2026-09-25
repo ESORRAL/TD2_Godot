@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cjl508lrirhdb"]
 
+[ext_resource type="PackedScene" uid="uid://bax2apyfx6u3t" path="res://assets/enemy/geodude.glb" id="1_2pb1h"]
+
 [sub_resource type="GDScript" id="GDScript_xjnqo"]
 script/source = "extends Area3D
 
@@ -24,21 +26,13 @@ func choose_next_cell() -> void:
 	target += direction
 "
 
-[sub_resource type="BoxMesh" id="BoxMesh_enemy"]
-size = Vector3(0.8, 0.8, 0.8)
-
-[sub_resource type="StandardMaterial3D" id="Mat_enemy"]
-albedo_color = Color(0.85, 0.15, 0.2, 1)
-
 [sub_resource type="BoxShape3D" id="Shape_enemy"]
 size = Vector3(0.7, 0.8, 0.7)
 
 [node name="Enemy" type="Area3D" unique_id=1613161469]
 script = SubResource("GDScript_xjnqo")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=711835512]
-mesh = SubResource("BoxMesh_enemy")
-surface_material_override/0 = SubResource("Mat_enemy")
-
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1403996583]
 shape = SubResource("Shape_enemy")
+
+[node name="Sketchfab_Scene" parent="." unique_id=1619714207 instance=ExtResource("1_2pb1h")]
