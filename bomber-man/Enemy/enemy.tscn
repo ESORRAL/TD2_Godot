@@ -4,12 +4,19 @@
 [ext_resource type="Script" uid="uid://lu6y0hr48q7a" path="res://Enemy/enemy.gd" id="2_enemygd"]
 
 [sub_resource type="BoxShape3D" id="Shape_enemy"]
-size = Vector3(0.7, 0.8, 0.7)
+size = Vector3(2.2902284, 1.1140625, 0.7)
 
 [node name="Enemy" type="Area3D" unique_id=1613161469]
 script = ExtResource("2_enemygd")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1403996583]
-shape = SubResource("Shape_enemy")
+speed = null
 
 [node name="Sketchfab_Scene" parent="." unique_id=1619714207 instance=ExtResource("1_2pb1h")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1299637976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.027788043)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1403996583]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08219293, 0.76230466, 0)
+shape = SubResource("Shape_enemy")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

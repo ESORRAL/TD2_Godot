@@ -34,3 +34,8 @@ func is_wall_ahead(dir: Vector3) -> bool:
 	query.exclude = [self]
 	var result := space_state.intersect_ray(query)
 	return not result.is_empty() and result.collider is StaticBody3D
+
+
+func _on_area_3d_body_entered(body: Node3D) -> void:
+	if body.has_method("prendre_degat"):
+		body.prendre_degat()

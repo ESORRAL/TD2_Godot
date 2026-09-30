@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dabprlhnjaxia" path="res://Player/player.gd" id="1_l8h54"]
 [ext_resource type="PackedScene" uid="uid://d3mot6klylgig" path="res://assets/player/bombermandynablaster_tg-16pce.glb" id="2_4ntmi"]
+[ext_resource type="PackedScene" uid="uid://m6nm3ed823r1" path="res://HUD/hud.tscn" id="3_btcbx"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_l4fat"]
 radius = 0.4
@@ -16,3 +17,5 @@ shape = SubResource("CapsuleShape3D_l4fat")
 
 [node name="Sketchfab_Scene" parent="." unique_id=48856966 instance=ExtResource("2_4ntmi")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
+
+[node name="HUD" parent="." unique_id=197939373 instance=ExtResource("3_btcbx")]

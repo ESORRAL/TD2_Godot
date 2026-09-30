@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dmeoi0crk6805"]
+
+[ext_resource type="Script" uid="uid://cv4hbd22nnxh3" path="res://Death/ressayer.gd" id="1_qmbki"]
+
+[node name="Death" type="Node2D" unique_id=1161114828]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=370538878]
+offset_right = 1155.0
+offset_bottom = 661.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1397034395]
+offset_left = 392.00003
+offset_top = 123.0
+offset_right = 522.0
+offset_bottom = 147.25
+scale = Vector2(3, 3)
+text = "Vous êtes mort ! "
+
+[node name="Ressayer" type="Button" parent="." unique_id=1886661876]
+offset_left = 446.0
+offset_top = 330.0
+offset_right = 545.0
+offset_bottom = 374.0
+text = "Réessayer"
+script = ExtResource("1_qmbki")
+
+[node name="Menu" type="Button" parent="." unique_id=2093528687]
+offset_left = 581.0
+offset_top = 330.0
+offset_right = 715.0
+offset_bottom = 374.0
+text = "Retour au menu"
+
+[connection signal="pressed" from="Ressayer" to="Ressayer" method="_on_pressed"]
