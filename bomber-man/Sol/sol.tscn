@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://d0clw3txbfsva" path="res://assets/texture/pixel-gazon-motif-transparent-pixelart-texture-de-bloc-d-ordinateur-modèle-herbe-verte-numérique-style-jeu-carré-383947503.webp" id="1_herbe"]
+
+[sub_resource type="StandardMaterial3D" id="Material_sol"]
+shading_mode = 0
+albedo_texture = ExtResource("1_herbe")
+texture_filter = 0
+
+[sub_resource type="BoxMesh" id="BoxMesh_sol"]
+material = SubResource("Material_sol")
+
+[node name="Sol" type="MeshInstance3D"]
+mesh = SubResource("BoxMesh_sol")

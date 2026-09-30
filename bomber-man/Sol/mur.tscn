@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cig2t5b714dvc"]
+
+[ext_resource type="Texture2D" uid="uid://5a1hi860vy4e" path="res://assets/texture/Image collée.png" id="1_xm7h6"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aader"]
+albedo_texture = ExtResource("1_xm7h6")
+
+[sub_resource type="BoxMesh" id="BoxMesh_mur"]
+material = SubResource("StandardMaterial3D_aader")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mur"]
+size = Vector3(1, 3, 1)
+
+[node name="Mur" type="StaticBody3D" unique_id=235324803]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=425474969]
+mesh = SubResource("BoxMesh_mur")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1967365301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("BoxShape3D_mur")

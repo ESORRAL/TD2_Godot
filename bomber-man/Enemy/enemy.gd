@@ -17,5 +17,20 @@ func _physics_process(delta: float) -> void:
 		choose_next_cell()
 
 func choose_next_cell() -> void:
-	direction = DIRECTIONS.pick_random()
-	target += direction
+	var directions := DIRECTIONS.duplicate()
+	directions.shuffle()
+	for dir in directions:
+		if not is_wall_ahead(dir):
+			direction = dir
+			target = global_position + dir
+			return
+	# Aucune direction libre : reste sur place
+	target = global_position
+
+func is_wall_ahead(dir: Vector3) -> bool:
+	var space_state := get_world_3d().direct_space_state
+	var from := global_position + Vector3.UP * 0.5
+	var query := PhysicsRayQueryParameters3D.create(from, from + dir)
+	query.exclude = [self]
+	var result := space_state.intersect_ray(query)
+	return not result.is_empty() and result.collider is StaticBody3D
