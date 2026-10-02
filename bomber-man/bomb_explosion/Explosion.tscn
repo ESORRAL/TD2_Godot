@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cjc1qo83g4drn"]
+
+[ext_resource type="Script" uid="uid://c7g7xcqdk8bld" path="res://bomb_explosion/explosion.gd" id="1_4ixet"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8qo7i"]
+albedo_color = Color(0.95548946, 0.20928678, 0.03454267, 1)
+emission_enabled = true
+emission = Color(0.7490196, 0.4, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4ixet"]
+material = SubResource("StandardMaterial3D_8qo7i")
+size = Vector3(0.9, 0.9, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1x2cq"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[node name="Explosion" type="Area3D" unique_id=728423339]
+script = ExtResource("1_4ixet")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1014169373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+mesh = SubResource("BoxMesh_4ixet")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=309454519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45, 0)
+shape = SubResource("BoxShape3D_1x2cq")

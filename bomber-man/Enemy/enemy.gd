@@ -39,3 +39,8 @@ func is_wall_ahead(dir: Vector3) -> bool:
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if body.has_method("prendre_degat"):
 		body.prendre_degat()
+		
+func hit_by_explosion() -> void:
+	queue_free()
+		
+		

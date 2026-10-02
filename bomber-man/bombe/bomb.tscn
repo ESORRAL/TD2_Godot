@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://7hy8pfoac6a2"]
+
+[ext_resource type="Script" uid="uid://c6bekyt5l7el4" path="res://bombe/bomb.gd" id="1_573fp"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_j810f"]
+radius = 0.4
+height = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_573fp"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4fn8o"]
+size = Vector3(0.9, 0.9, 0.9)
+
+[node name="Bomb" type="StaticBody3D" unique_id=466523536]
+script = ExtResource("1_573fp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1517581184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+mesh = SubResource("SphereMesh_j810f")
+surface_material_override/0 = SubResource("StandardMaterial3D_573fp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=480768954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+shape = SubResource("BoxShape3D_4fn8o")
+
+[node name="Timer" type="Timer" parent="." unique_id=1483903574]
