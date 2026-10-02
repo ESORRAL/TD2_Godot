@@ -1,5 +1,12 @@
 extends CharacterBody3D
 
+# bomb
+const BOMB_SCENE := preload("res://bombe/bomb.tscn")
+@export var max_bombs: int = 1
+@export var bomb_range: int = 1
+var active_bombs: int = 0
+# fin de la partie bomb
+
 @export var speed: float = 5.0
 
 @onready var skin = $Sketchfab_Scene 
@@ -46,3 +53,33 @@ func prendre_degat() -> void:
 		global_position = position_depart
 	else:
 		get_tree().change_scene_to_file("res://Death/death.tscn")
+		
+# Début deuxième partie du script pour la bombe du player
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("place_bomb"):
+		place_bomb()
+
+func place_bomb() -> void:
+	if active_bombs >= max_bombs:
+		return
+	var cell := Grid.world_to_cell(global_position)
+	for b in get_tree().get_nodes_in_group("bomb"):
+		if b.cell == cell:
+			return
+
+	var bomb := BOMB_SCENE.instantiate()
+	bomb.cell = cell
+	bomb.bomb_range = bomb_range
+	bomb.owner_player = self
+	get_parent().add_child(bomb)
+	bomb.global_position = Grid.cell_to_world(cell)
+
+	add_collision_exception_with(bomb)
+	bomb.add_collision_exception_with(self)
+
+	active_bombs += 1
+	bomb.exploded.connect(func(): active_bombs -= 1)
+
+func hit_by_explosion() -> void:
+	prendre_degat()
+# fin deuxième partie du script bomb pour le player

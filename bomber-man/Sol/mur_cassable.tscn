@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://cig2t5b714dvc"]
+[gd_scene format=3 uid="uid://bykflr0yam432"]
 
-[ext_resource type="Texture2D" uid="uid://5a1hi860vy4e" path="res://assets/texture/Image collée.png" id="1_xm7h6"]
+[ext_resource type="Texture2D" uid="uid://5a1hi860vy4e" path="res://assets/texture/Image collée.png" id="1_k1q6g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aader"]
-albedo_texture = ExtResource("1_xm7h6")
+albedo_color = Color(0.9019608, 0.4509804, 0.26666668, 1)
+albedo_texture = ExtResource("1_k1q6g")
 
 [sub_resource type="BoxMesh" id="BoxMesh_mur"]
 material = SubResource("StandardMaterial3D_aader")
@@ -11,7 +12,7 @@ material = SubResource("StandardMaterial3D_aader")
 [sub_resource type="BoxShape3D" id="BoxShape3D_mur"]
 size = Vector3(1, 3, 1)
 
-[node name="Mur" type="StaticBody3D" unique_id=235324803 groups=["wall_solid"]]
+[node name="Mur" type="StaticBody3D" unique_id=235324803 groups=["wall_breakable"]]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=425474969]
 mesh = SubResource("BoxMesh_mur")
